@@ -1,0 +1,12 @@
+services:
+  terraria:
+    build:
+      dockerfile: Dockerfile
+    volumes:
+      - ./server:/data
+    ports:
+      - 7777:7777
+    env_file: .env # shhh, it's a secret.
+    environment:
+      MOTD: Welcome to the server! My condolences.
+      WORLDNAME: An entirely scuffed Terraria experience
